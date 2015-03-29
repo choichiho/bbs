@@ -1,50 +1,53 @@
 <template name="bbs">
-    <div class="container">
-        <div class="row clearfix">
-            <div class="col-md-12 column">
-                <h3>
-                    {{headerTitle}}
-                </h3>
-                <blockquote>
-                    <p>
-                        {{headerDes}}
-                    </p>
-                </blockquote>
-                <div class="row clearfix">
-                    <div class="col-md-12 column">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>
-                                    <input type="checkbox" name="all"/>
-                                </th>
-                                <th>
-                                    번호
-                                </th>
-                                <th>
-                                    제목
-                                </th>
-                                <th>
-                                    등록자
-                                </th>
-                                <th>
-                                    등록일자
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {{#each list}}
-                                {{>bbsList}}
-                            {{/each}}
-                            </tbody>
-                        </table>
-                        <a href="/bbsInsert" name="bReg" class="btn btn-success">등록</a>
-                        <button type="button" name="bDel" class="btn btn-danger">삭제</button>
+    {{#if currentUser}}
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <h3>
+                        {{headerTitle}}
+                    </h3>
+                    <blockquote>
+                        <p>
+                            {{headerDes}}
+                        </p>
+                    </blockquote>
+                    <div class="row clearfix">
+                        <div class="col-md-12 column">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" name="all"/>
+                                    </th>
+                                    <th>
+                                        번호
+                                    </th>
+                                    <th>
+                                        제목
+                                    </th>
+                                    <th>
+                                        등록자
+                                    </th>
+                                    <th>
+                                        등록일자
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#each list}}
+                                    {{>bbsList}}
+                                {{/each}}
+                                </tbody>
+                            </table>
+                            <a href="/bbsInsert" name="bReg" class="btn btn-success">등록</a>
+                            <button type="button" name="bDel" class="btn btn-danger">삭제</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+    {{/if}}
 
 </template>
 

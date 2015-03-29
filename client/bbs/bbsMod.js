@@ -3,13 +3,13 @@
  */
 Template.bbsMod.helpers({
 
-    bbsOneTitle : function() {
+    bbsOneTitle: function () {
         return this.bbsOneData.title;
     },
-    bbsOneName : function () {
+    bbsOneName: function () {
         return this.bbsOneData.userName;
     },
-    bbsOneContext : function() {
+    bbsOneContext: function () {
         return this.bbsOneData.context;
     }
 
@@ -17,22 +17,22 @@ Template.bbsMod.helpers({
 
 Template.bbsMod.events({
 
-    'click button[name=bBbsMod]' : function(evt, tmpl) {
+    'click button[name=bBbsMod]': function (evt, tmpl) {
         BBSTABLE.update(
-            {_id : this.bbsOneData._id},
-            {$set:
-                {
+            {_id: this.bbsOneData._id},
+            {
+                $set: {
                     title: tmpl.find('input[name=modTitle]').value,
                     userName: tmpl.find('input[name=modRegName]').value,
                     context: tmpl.find('textarea[name=modContext]').value
                 }
             },
-            {multi : true}
-        ,Router.go('/bbs'));
+            {multi: true}
+            , Router.go('/bbs'));
     }
 
 });
 
-Template.bbsMod.rendered = function() {
+Template.bbsMod.rendered = function () {
 
 };
