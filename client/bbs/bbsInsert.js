@@ -1,6 +1,7 @@
 /**
  * Created by edu on 2015-03-28.
  */
+
 Template.bbsInsert.helpers({
 
 });
@@ -30,5 +31,5 @@ Template.bbsInsert.events({
 });
 
 Template.bbsInsert.rendered = function() {
-    tinymce.init({selector:'textarea'});
+    //tinymce.init({selector:'textarea'});
 };
