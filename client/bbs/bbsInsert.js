@@ -30,5 +30,5 @@ Template.bbsInsert.events({
 });
 
 Template.bbsInsert.rendered = function() {
-
+    tinymce.init({selector:'textarea'});
 };
