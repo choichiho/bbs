@@ -1,0 +1,22 @@
+<template name="test">
+
+    <div>
+        <table class="table table-hover table-striped table-boardered">
+            <thead>
+                <th>name</th>
+                <th>download</th>
+            </thead>
+            <tbody>
+            {{#each images}}
+                <tr>
+                    <td><a href="{{this.url}}" target="_blank">{{name}}</a></td>
+                    <td>
+                        <a class="btn btn-primary" href="{{url download=true}}">download</a>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>
+

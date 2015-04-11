@@ -19,7 +19,11 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputFile">첨부</label><input type="file" id="exampleInputFile">
+
+                        {{#each storData}}
+                            <a href="{{this.url}}" target="#">{{name}}</a>
+                            <a class="btn btn-primary" href="{{url download=true}}" target="#">download</a>
+                        {{/each}}
                 </div>
 
                 <button class="btn btn-success" name="bBbsMod">확인</button>

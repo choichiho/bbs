@@ -42,6 +42,7 @@ Template.bbs.events({
 
     }
 
+
 });
 
 Template.bbs.rendered = function () {

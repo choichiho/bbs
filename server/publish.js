@@ -13,3 +13,7 @@ Meteor.publish("userData", function () {
         this.ready();
     }
 });
+
+Meteor.publish("stor", function () {
+    return STOR.find();
+});

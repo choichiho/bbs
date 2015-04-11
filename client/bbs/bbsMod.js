@@ -11,6 +11,9 @@ Template.bbsMod.helpers({
     },
     bbsOneContext: function () {
         return this.bbsOneData.context;
+    },
+    storData : function () {
+        return STOR.find(this.bbsOneData.fileId);
     }
 
 });
